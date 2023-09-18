@@ -1,15 +1,10 @@
-/**
- * The mail server for Protein.
- */
-
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { index } from "../lib/routes.ts";
 
 const app = new Application();
 const router = new Router();
 
-router.get("/", (ctx) => {
-    ctx.response.body = { "motd": "The NSA is watching you, always." };
-});
+router.get("/", index);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
