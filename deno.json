@@ -1,0 +1,12 @@
+{
+    "tasks": {
+        "start": "deno run -A src/main.ts"
+    },
+    "fmt": {
+        "useTabs": false,
+        "indentWidth": 4
+    },
+    "lint": {
+        "include": ["src/", "lib/"]
+    }
+}
